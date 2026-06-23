@@ -197,7 +197,7 @@ finalizarBtn.addEventListener("click", () => {
 
   mensagem += `%0A*Total: R$ ${totalCarrinhoEl.textContent}*`;
 
-  const numero = "5511999999999";
+  const numero = "5511950755880";
   finalizarBtn.href = `https://wa.me/${numero}?text=${mensagem}`;
 });
 
