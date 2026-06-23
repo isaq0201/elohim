@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elohim | Moda com Propósito</title>
+  <meta name="description" content="Elohim - Moda elegante, modesta e com propósito. Conheça nossa coleção.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <nav class="navbar">
+
+      <div class="logo">
+        ELOHIM
+        <span>MODA COM PROPÓSITO</span>
+      </div>
+
+      <ul class="menu" id="menuNav">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#colecao" class="menu-link">Coleção</a></li>
+        <li><a href="#avaliacoes" class="menu-link">Avaliações</a></li>
+        <li><a href="#contato" class="menu-link">Contato</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="carrinho-btn" id="carrinhoBtn" aria-label="Abrir carrinho">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="carrinho-badge" id="quantidadeCarrinho">0</span>
+        </button>
+
+        <button class="menu-mobile" id="menuMobileBtn" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose">×</button>
+    <ul>
+      <li><a href="#inicio" class="mobile-menu-link">Início</a></li>
+      <li><a href="#sobre" class="mobile-menu-link">Sobre</a></li>
+      <li><a href="#colecao" class="mobile-menu-link">Coleção</a></li>
+      <li><a href="#avaliacoes" class="mobile-menu-link">Avaliações</a></li>
+      <li><a href="#contato" class="mobile-menu-link">Contato</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== CARRINHO DRAWER ========== -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <aside class="carrinho-drawer" id="carrinhoDrawer" aria-label="Carrinho de compras">
+    <div class="drawer-header">
+      <h2>Seu Pedido</h2>
+      <button class="drawer-close" id="drawerClose" aria-label="Fechar carrinho">×</button>
+    </div>
+
+    <div class="drawer-body">
+      <div id="listaCarrinho" class="lista-carrinho">
+        <div class="carrinho-vazio">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <p>Seu carrinho está vazio.</p>
+          <span>Adicione peças da nossa coleção.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="total-linha">
+        <span>Total</span>
+        <strong>R$ <span id="totalCarrinho">0,00</span></strong>
+      </div>
+      <a class="btn-whatsapp" id="finalizarCompra" href="#" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.523 5.851L.057 23.885a.5.5 0 00.613.613l6.034-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.376l-.36-.213-3.724.905.922-3.607-.236-.371A9.818 9.818 0 1112 21.818z"/>
+        </svg>
+        Comprar pelo WhatsApp
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Nova Coleção 2026</p>
+      <h1>Vista sua<br><em>identidade</em></h1>
+      <p class="hero-sub">Moda elegante, confortável e criada com propósito.</p>
+      <div class="hero-buttons">
+        <a href="#colecao" class="btn-principal">Ver coleção</a>
+        <a href="#sobre" class="btn-secundario">Conheça a Elohim</a>
+      </div>
+    </div>
+    <div class="hero-visual"></div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-texto">
+          <p class="secao-eyebrow">Nossa essência</p>
+          <h2>Moda que fala<br>por quem você é</h2>
+          <p>A Elohim nasceu para unir estilo, qualidade e significado. Cada peça é criada pensando em pessoas que desejam vestir sua identidade com elegância e propósito.</p>
+          <p>Tecidos selecionados, acabamentos que duram e um design que representa quem você é — isso é a Elohim.</p>
+        </div>
+        <div class="sobre-destaques">
+          <div class="destaque-item">
+            <span class="destaque-num">01</span>
+            <h4>Tecidos premium</h4>
+            <p>Selecionados com critério para máximo conforto e durabilidade.</p>
+          </div>
+          <div class="destaque-item">
+            <span class="destaque-num">02</span>
+            <h4>Design atemporal</h4>
+            <p>Peças que transcendem tendências e se adaptam ao seu estilo.</p>
+          </div>
+          <div class="destaque-item">
+            <span class="destaque-num">03</span>
+            <h4>Produção consciente</h4>
+            <p>Moda com responsabilidade, do material ao acabamento final.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COLEÇÃO ========== -->
+  <section class="colecao" id="colecao">
+    <div class="container">
+      <p class="secao-eyebrow text-center">Coleção 2026</p>
+      <h2 class="text-center">Nova Coleção</h2>
+      <p class="subtitulo">Peças selecionadas para representar sua essência.</p>
+      <div id="listaProdutos" class="produtos-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========== ESTATÍSTICAS ========== -->
+  <section class="estatisticas">
+    <div class="container estatisticas-inner">
+      <div class="estatistica-card">
+        <h3>5.0</h3>
+        <p>Avaliação média</p>
+      </div>
+      <div class="estatistica-divider"></div>
+      <div class="estatistica-card">
+        <h3>500+</h3>
+        <p>Clientes satisfeitos</p>
+      </div>
+      <div class="estatistica-divider"></div>
+      <div class="estatistica-card">
+        <h3>98%</h3>
+        <p>Taxa de satisfação</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AVALIAÇÕES ========== -->
+  <section class="avaliacoes" id="avaliacoes">
+    <div class="container">
+      <p class="secao-eyebrow text-center">Depoimentos</p>
+      <h2 class="text-center">O que nossos clientes dizem</h2>
+      <div class="avaliacoes-action">
+        <button id="abrirModal" class="btn-principal">Enviar avaliação</button>
+      </div>
+      <div id="listaAvaliacoes" class="avaliacoes-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========== MODAL AVALIAÇÃO ========== -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <div class="modal-content">
+      <button id="fecharModal" class="fechar" aria-label="Fechar">×</button>
+      <p class="secao-eyebrow">Compartilhe sua experiência</p>
+      <h2 id="modalTitulo">Avaliar Elohim</h2>
+      <form id="formulario" novalidate>
+        <div class="form-group">
+          <label for="nome">Seu nome</label>
+          <input id="nome" type="text" placeholder="Ex: Maria Silva" required>
+        </div>
+        <div class="form-group">
+          <label for="nota">Avaliação</label>
+          <select id="nota">
+            <option value="5">★★★★★ — Excelente</option>
+            <option value="4">★★★★☆ — Muito bom</option>
+            <option value="3">★★★☆☆ — Bom</option>
+            <option value="2">★★☆☆☆ — Regular</option>
+            <option value="1">★☆☆☆☆ — Ruim</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comentario">Seu comentário</label>
+          <textarea id="comentario" placeholder="Conte sua experiência com a Elohim..." required></textarea>
+        </div>
+        <button type="submit" class="btn-principal btn-full">Enviar avaliação</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========== CONTATO ========== -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <p class="secao-eyebrow text-center">Fale com a gente</p>
+      <h2 class="text-center">Contato</h2>
+      <p class="subtitulo">Estamos aqui para ajudar você.</p>
+      <div class="contato-grid">
+        <div class="contato-card">
+          <div class="contato-icon">✉</div>
+          <h4>E-mail</h4>
+          <p>contato@elohim.com</p>
+        </div>
+        <div class="contato-card">
+          <div class="contato-icon">💬</div>
+          <h4>WhatsApp</h4>
+          <p>Atendimento rápido</p>
+        </div>
+        <div class="contato-card">
+          <div class="contato-icon">🕐</div>
+          <h4>Horário</h4>
+          <p>Segunda a Sexta<br>9h às 18h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        ELOHIM
+        <span>MODA COM PROPÓSITO</span>
+      </div>
+      <p>© 2026 Elohim — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="produtos.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
